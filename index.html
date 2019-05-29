@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+// @ts-check 
+<html>
+<head>
+    <style>
+
+      body {
+      text-align: center;
+      background: black;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: comfortaa;
+    }
+    h1 {
+      font-size: 80px;
+      font-family: Bungee Shade;
+      color: #fff;
+      text-shadow: 1px 1px 4px 	#00ffdf, 0px 0px 3px 	#00ffdf, 0 0 4px #00ffdf, 0 0 30px #e302ff, 0 0 40px #e302ff, 0 0 55px #e302ff, 0 0 60px #e302ff;
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+    }
+    p {
+      font-size: 35px;
+      font-family: Comfortaa;
+      color: #fff;
+      text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #e302ff, 0 0 5px #e302ff, 0 0 5px #e302ff, 0 0 5px #e302ff, 0 0 5px #e302ff;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    #rollit {
+      background: #e500b9;
+      font-family: comfortaa;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 50px;
+      padding: 10px;
+      border: 0;
+      border-radius: 4px;
+      color: #ffdeed;
+    }
+#dice1 {
+  margin: 25px;
+}
+
+
+
+</style>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Inline|Bungee+Shade|Comfortaa|Monoton|Orbitron" rel="stylesheet">
+  <title>Roll the Dice</title>
+
+</head>
+
+<body>
+  <h1>Roll the Dice!</h1>
+  <p>Welcome codeling! Press the button and chance your luck.</p>
+  <div>
+  <button type="button" value="tira dados" id="rollit">Shoot 'em Stickman'</button>
+  </div>
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////
+//BELOW I WOULD ASSIGN THE CLASS 'dices' TO THE SPAN TAGS (YOU CAN ASSIGN MULTIPILE CLASSES TO A TAG, BUT ONLY 1 ID). ALSO CREATE A UNIQUE //SPAN WITH AN ID TO 
+//INSERT YOUR INNER HTML, INSIDE THE OTHER SPAN TAGS WITH THE ID OF 'dice1'. ***REMEMBER ORDERING OF THE CODE IS KEY IN HTML***
+/////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <span id="dice1" class="dices">
+        <img id="diceUno" src="https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png" alt="Neon-cube-no-1">
+    </span>
+    <span id="dice2" class="dices">
+        <img id="diceDos" src="https://i.ibb.co/RyNcby0/Neon-cube-no-2.png" alt="Neon-cube-no-2">
+    </span>
+
+
+
+<!-- <div class="row"> -->
+<!--   <div class="column">
+     <img src="https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png" alt="Neon-cube-no-1"  name="dice_1" border="0" >
+  </div> -->
+<!--   <div class="column"> -->
+<!--     <img src="https://i.ibb.co/RyNcby0/Neon-cube-no-2.png" alt="Neon-cube-no-2" name="dice_2" border="0"> -->
+<!-- </div> -->
+
+
+
+
+
+
+
+<script>
+
+///////////////////////////////////////////////////////////////////////
+//YOU DON'T NEED TO CREATE OBJECTS FOR YOUR WEB APP ***DELETE THE BELOW CODE***
+///////////////////////////////////////////////////////////////////////
+
+//    var dices = [
+//     {name:"1", image:"https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png"},
+//     {name: "2", image:"https://i.ibb.co/RyNcby0/Neon-cube-no-2.png"},
+//     {name: "3", image:"https://i.ibb.co/n6Cg1zG/Neon-cube-no-3.png"},
+//     {name: "4", image:"https://i.ibb.co/RYW9Vdt/Neon-cube-no-4.png"},
+//     {name: "5", image:"https://i.ibb.co/Q9MyL4t/Neon-cube-no-5png.png"},
+//     {name: "6", image:"https://i.ibb.co/YNh7LBN/Neon-cube-no-6.png"}
+
+//   ]
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+//ADDING AN EVENT LISTENER TO AN ELEMENT
+//var variableName = get the element by ID;
+// call the variableName and use the dot '.' to add an event listener. Inside the parenthesis declare the event type and the function to run seperated with a comma
+///////////////////////////////////////////////////////////////////////////////////////
+//												YOUR PREVIOUS CODE
+                        
+var rollthedice = document.getElementById("rollit");
+
+rollthedice.addEventListener("click", tiraLosDados);
+
+function tiraLosDados () {
+
+var randomNumber = Math.floor(Math.random() * 6) + 1;
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+var diceFace1 = document.getElementById("diceUno");
+var diceFace2 = document.getElementById("diceDos")
+
+console.log(randomNumber);
+switch(randomNumber) {
+    
+    
+    case 1:
+        diceFace1.setAttribute("src", "https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png");
+        console.log ("Uno");
+        break;
+
+    case 2:
+        diceFace1.setAttribute("src", "https://i.ibb.co/RyNcby0/Neon-cube-no-2.png");
+        console.log("Dos");
+        break;
+
+    case 3:
+        diceFace1.setAttribute("src", "https://i.ibb.co/n6Cg1zG/Neon-cube-no-3.png");   
+        console.log("Tres");
+        break;
+
+    case 4:
+        diceFace1.setAttribute("src", "https://i.ibb.co/RYW9Vdt/Neon-cube-no-4.png");
+        console.log("Cuatro");
+        break;
+
+    case 5:
+        diceFace1.setAttribute("src", "https://i.ibb.co/Q9MyL4t/Neon-cube-no-5png.png");
+        console.log("Cinco");
+        break;
+
+    case 6:
+        diceFace1.setAttribute("src", "https://i.ibb.co/YNh7LBN/Neon-cube-no-6.png");
+        
+        console.log("Seis");
+        break;
+
+}
+console.log(randomNumber2);
+switch(randomNumber2) {
+    
+    
+    case 1:
+        diceFace2.setAttribute("src", "https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png");
+        console.log ("Uno");
+        break;
+
+    case 2:
+        diceFace2.setAttribute("src", "https://i.ibb.co/RyNcby0/Neon-cube-no-2.png");
+        console.log("Dos");
+        break;
+
+    case 3:
+        diceFace2.setAttribute("src", "https://i.ibb.co/n6Cg1zG/Neon-cube-no-3.png");    
+        console.log("Tres");
+        break;
+
+    case 4:
+        diceFace2.setAttribute("src", "https://i.ibb.co/RYW9Vdt/Neon-cube-no-4.png");
+        console.log("Cuatro");
+        break;
+
+    case 5:
+        diceFace2.setAttribute("src", "https://i.ibb.co/Q9MyL4t/Neon-cube-no-5png.png");
+        console.log("Cinco");
+        break;
+
+    case 6:
+        diceFace2.setAttribute("src", "https://i.ibb.co/YNh7LBN/Neon-cube-no-6.png");
+        console.log("Seis");
+        break;
+
+}
+}
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html> 
