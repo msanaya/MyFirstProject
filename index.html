@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-// @ts-check 
 <html>
 <head>
     <style>
 
-      body {
+    body {
       text-align: center;
       background: black;
       background-size: cover;
       background-position: center;
       color: white;
+      border-style: solid;
+      border-width: 3px;
+      box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 15px #01e5cc, 0 0 15px #e302ff, inset 0 0 15px #01e5cc, inset 0 0 15px #e302ff, inset 0 0 15px #01e5cc;
       font-family: comfortaa;
+      padding-bottom: 3.9cm;
     }
     h1 {
       font-size: 80px;
@@ -42,9 +45,13 @@
       border-radius: 4px;
       color: #ffdeed;
     }
-#dice1 {
-  margin: 25px;
-}
+    #dice1 {
+      margin: 25px;
+      padding-bottom: 100px;
+    }
+    footer {
+      bottom: 0;
+    }
 
 
 
@@ -58,66 +65,36 @@
 
 <body>
   <h1>Roll the Dice!</h1>
+
   <p>Welcome codeling! Press the button and chance your luck.</p>
+
   <div>
   <button type="button" value="tira dados" id="rollit">Shoot 'em Stickman'</button>
   </div>
 
-
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////
-//BELOW I WOULD ASSIGN THE CLASS 'dices' TO THE SPAN TAGS (YOU CAN ASSIGN MULTIPILE CLASSES TO A TAG, BUT ONLY 1 ID). ALSO CREATE A UNIQUE //SPAN WITH AN ID TO 
-//INSERT YOUR INNER HTML, INSIDE THE OTHER SPAN TAGS WITH THE ID OF 'dice1'. ***REMEMBER ORDERING OF THE CODE IS KEY IN HTML***
-/////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-    <span id="dice1" class="dices">
+  <span id="dice1" class="dices">
         <img id="diceUno" src="https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png" alt="Neon-cube-no-1">
     </span>
     <span id="dice2" class="dices">
         <img id="diceDos" src="https://i.ibb.co/RyNcby0/Neon-cube-no-2.png" alt="Neon-cube-no-2">
-    </span>
+  </span>
+
+<!-- Load in Firefox -->
+  <iframe width="1" height="1" wmode="transparent" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34340654&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+  </iframe>
 
 
 
-<!-- <div class="row"> -->
-<!--   <div class="column">
-     <img src="https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png" alt="Neon-cube-no-1"  name="dice_1" border="0" >
-  </div> -->
-<!--   <div class="column"> -->
-<!--     <img src="https://i.ibb.co/RyNcby0/Neon-cube-no-2.png" alt="Neon-cube-no-2" name="dice_2" border="0"> -->
-<!-- </div> -->
+  <div>
+    <footer>
+    </footer>
+  </div>
 
-
-
-
-
-
+  
+</body>
 
 <script>
-
-///////////////////////////////////////////////////////////////////////
-//YOU DON'T NEED TO CREATE OBJECTS FOR YOUR WEB APP ***DELETE THE BELOW CODE***
-///////////////////////////////////////////////////////////////////////
-
-//    var dices = [
-//     {name:"1", image:"https://i.ibb.co/BcqgtZ7/Neon-cube-no-1.png"},
-//     {name: "2", image:"https://i.ibb.co/RyNcby0/Neon-cube-no-2.png"},
-//     {name: "3", image:"https://i.ibb.co/n6Cg1zG/Neon-cube-no-3.png"},
-//     {name: "4", image:"https://i.ibb.co/RYW9Vdt/Neon-cube-no-4.png"},
-//     {name: "5", image:"https://i.ibb.co/Q9MyL4t/Neon-cube-no-5png.png"},
-//     {name: "6", image:"https://i.ibb.co/YNh7LBN/Neon-cube-no-6.png"}
-
-//   ]
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////
-//ADDING AN EVENT LISTENER TO AN ELEMENT
-//var variableName = get the element by ID;
-// call the variableName and use the dot '.' to add an event listener. Inside the parenthesis declare the event type and the function to run seperated with a comma
-///////////////////////////////////////////////////////////////////////////////////////
-//												YOUR PREVIOUS CODE
-                        
+                       
 var rollthedice = document.getElementById("rollit");
 
 rollthedice.addEventListener("click", tiraLosDados);
