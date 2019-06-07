@@ -1,2 +1,3 @@
-# MyFirstProject
-Roll the dice test
+# MyFirstCodingProject
+Roll the Dice!
+Sound included. 
